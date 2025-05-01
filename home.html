@@ -1,0 +1,227 @@
+{% extends 'layout.html' %}
+
+{% block title %}Home | Petals & Presents{% endblock %}
+
+{% block content %}
+
+<!-- Navbar -->
+<header class="navbar">
+  <div class="brand-container">
+    <img src="{{ url_for('static', filename='images/Assignment/Home Page/Logo of Petal & Presents.png') }}" alt="Petals & Presents Logo" class="brand-logo">
+    <div class="logo">Petals & Presents</div>
+  </div>
+  <input type="text" placeholder="Search for anything..." class="search">
+  <button class="search-btn">
+    <img src="{{ url_for('static', filename='images/Assignment/Home Page/Search.WEBP') }}" alt="Search">
+  </button>
+  <div class="icons">
+    <span>Hotline<br>011 2564934</span>
+    <a href="/login"><img src="{{ url_for('static', filename='images/Assignment/Home Page/User Account.png') }}" class="user-circle" alt="User Account"></a>
+    <img src="{{ url_for('static', filename='images/Assignment/Home Page/Shopping Cart.jpg') }}" class="icon" alt="Cart">
+  </div>
+</header>
+
+<!-- Top Navigation -->
+<nav class="top-nav">
+  <button class="category-btn">Categories ▼</button>
+  <a href="#">Our Collection</a>
+  <a href="{{ url_for('new_arrivals')}}">New Arrivals</a>
+  <a href="{{ url_for('flowers')}}">Flowers</a>
+  <a href="{{ url_for('chocolates')}}">Chocolates</a>
+  <a href="{{ url_for('cakes')}}">Cakes</a>
+  <a href="{{ url_for('gift_sets')}}">Gift Sets</a>
+  <a href="{{ url_for('deals')}}">Deals</a>
+  <a href="{{ url_for('order_status')}}">Order Status</a>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-text">
+    <h1>Petals & Perfection</h1>
+    <p>Shop Our Floral Masterpieces</p>
+    <button class="order-now">ORDER NOW</button>
+  </div>
+  <div class="hero-right">
+    <div class="hero-image-container">
+      <img src="{{ url_for('static', filename='images/Assignment/Home Page/1.png') }}" class="hero-image" alt="Flower Bouquet">
+    </div>
+  </div>
+</section>
+
+<!-- Categories Section -->
+<section class="categories">
+  <div class="category">
+    <div class="category-circle">
+      <img src="{{ url_for('static', filename='images/Assignment/Home Page/Toy.png') }}" alt="Toys">
+    </div>
+    <a href="{{ url_for('toys')}}"> Toys</a>
+  </div>
+  <div class="category">
+    <div class="category-circle">
+      <img src="{{ url_for('static', filename='images/Assignment/Home Page/Flowers.png') }}" alt="Flowers">
+    </div>
+    <a href="{{ url_for('flowers')}}"> Flowers</a>
+  </div>
+  <div class="category">
+    <div class="category-circle">
+      <img src="{{ url_for('static', filename='images/Assignment/Home Page/Chocolate.png') }}" alt="Chocolates">
+    </div>
+    <a href="{{ url_for('chocolates')}}"> Chocolates</a>
+  </div>
+  <div class="category">
+    <div class="category-circle">
+      <img src="{{ url_for('static', filename='images/Assignment/Home Page/Cake.png') }}" alt="Cakes">
+    </div>
+    <a href="{{ url_for('cakes')}}"> Cakes</a>
+  </div>
+  <div class="category">
+    <div class="category-circle">
+      <img src="{{ url_for('static', filename='images/Assignment/Home Page/Greeting Card.png') }}" alt="Greeting Cards">
+    </div>
+    <a href="{{ url_for('greeting_cards')}}"> Greeting Cards</a>
+  </div>
+  <div class="category">
+    <div class="category-circle">
+      <img src="{{ url_for('static', filename='images/Assignment/Home Page/Perfume.png') }}" alt="Perfume">
+    </div>
+    <a href="{{ url_for('perfumes')}}"> Perfume</a>
+  </div>
+  <div class="category">
+    <div class="category-circle">
+      <img src="{{ url_for('static', filename='images/Assignment/Home Page/Jewelry.png') }}" alt="Jewelry">
+    </div>
+    <a href="{{ url_for('jewelry')}}"> Jewelry</a>
+  </div>
+  <div class="category">
+    <div class="category-circle">
+      <img src="{{ url_for('static', filename='images/Assignment/Home Page/Gift Sets.png') }}" alt="Gift Sets">
+    </div>
+    <a href="{{ url_for('gift_sets')}}"> Gift Sets</a>
+  </div>
+  <div class="category">
+    <div class="category-circle">
+      <img src="{{ url_for('static', filename='images/Assignment/Home Page/Mugs.png') }}" alt="Mugs">
+    </div>
+    <a href="{{ url_for('mugs')}}"> Mugs</a>
+  </div>
+  <div class="category">
+    <div class="category-circle">
+      <img src="{{ url_for('static', filename='images/Assignment/Home Page/Vouchers.png') }}" alt="Gift Vouchers">
+    </div>
+    <a href="{{ url_for('gift_vouchers')}}"> Vouchers</a>
+  </div>
+</section>
+
+<!-- Shop By Section -->
+<div class="shop-by">
+  <div class="card pink">
+    <div class="card-content">
+      <div>
+        <div class="card-title">FOR HER</div>
+        <div class="card-link">Shop Now <span class="arrow">→</span></div>
+      </div>
+      <img src="{{ url_for('static', filename='images/Assignment/Home Page/2.png') }}" alt="For Her" class="card-img">
+    </div>
+  </div>
+  <div class="card purple">
+    <div class="card-content">
+      <div>
+        <div class="card-title">FOR HIM</div>
+        <div class="card-link">Shop Now <span class="arrow">→</span></div>
+      </div>
+      <img src="{{ url_for('static', filename='images/Assignment/Home Page/3.png') }}" alt="For Him" class="card-img">
+    </div>
+  </div>
+  <div class="card blue">
+    <div class="card-content">
+      <div>
+        <div class="card-title">FOR MOM</div>
+        <div class="card-link">Shop Now <span class="arrow">→</span></div>
+      </div>
+      <img src="{{ url_for('static', filename='images/Assignment/Home Page/4.png') }}" alt="For Mom" class="card-img">
+    </div>
+  </div>
+  <div class="card green">
+    <div class="card-content">
+      <div>
+        <div class="card-title">FOR DAD</div>
+        <div class="card-link">Shop Now <span class="arrow">→</span></div>
+      </div>
+      <img src="{{ url_for('static', filename='images/Assignment/Home Page/5.png') }}" alt="For Dad" class="card-img">
+    </div>
+  </div>
+  <div class="card yellow">
+    <div class="card-content">
+      <div>
+        <div class="card-title">FOR KIDS</div>
+        <div class="card-link">Shop Now <span class="arrow">→</span></div>
+      </div>
+      <img src="{{ url_for('static', filename='images/Assignment/Home Page/6.png') }}" alt="For Kids" class="card-img">
+    </div>
+  </div>
+  <div class="card red">
+    <div class="card-content">
+      <div>
+        <div class="card-title">FOR FRIENDS</div>
+        <div class="card-link">Shop Now <span class="arrow">→</span></div>
+      </div>
+      <img src="{{ url_for('static', filename='images/Assignment/Home Page/7.png') }}" alt="For Friends" class="card-img">
+    </div>
+  </div>
+</div>
+
+<!-- Features Bar -->
+<div class="features-bar">
+  <div class="feature">
+    <img src="{{ url_for('static', filename='images/Assignment/Home Page/Free Shipping.png') }}" alt="Free Shipping" class="feature-icon">
+    <div>
+      <div class="feature-title">FREE SHIPPING</div>
+      <div class="feature-desc">Free shipping orders<br>over Rs.10 000</div>
+    </div>
+  </div>
+  <div class="feature">
+    <img src="{{ url_for('static', filename='images/Assignment/Home Page/Multiple Payment Options.png') }}" alt="Payment Options" class="feature-icon">
+    <div>
+      <div class="feature-title">MULTIPLE PAYMENT OPTIONS</div>
+      <div class="feature-desc">Credit/Debit Cards, Bank Transfer<br>&amp; Cash on Delivery</div>
+    </div>
+  </div>
+  <div class="feature">
+    <img src="{{ url_for('static', filename='images/Assignment/Home Page/Secured Payments.png') }}" alt="Secured Payments" class="feature-icon">
+    <div>
+      <div class="feature-title">SECURED PAYMENTS</div>
+      <div class="feature-desc">Payments are secured by Commercial <br>Bank, Sampath Bank &amp; Peoples' Bank</div>
+    </div>
+  </div>
+  <div class="feature">
+    <img src="{{ url_for('static', filename='images/Assignment/Home Page/Branch Network.png') }}" alt="Branch Network" class="feature-icon">
+    <div>
+      <div class="feature-title">BRANCH NETWORK</div>
+      <div class="feature-desc">Colombo 07, Nugegoda,<br>Galle, Kandy</div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-section">
+    <p><b>INFO</b><br>Privacy Policy<br>Terms & Conditions</p>
+    <p><b>QUICK LINKS</b><br>Flowers<br>Cakes</p>
+    <p><b>KEEP IN TOUCH</b><br>
+      <span class="socials">
+        <img src="{{ url_for('static', filename='images/Assignment/Home Page/Facebook.png') }}" class="icon">
+        <img src="{{ url_for('static', filename='images/Assignment/Home Page/Instagram.png') }}" class="icon">
+        <img src="{{ url_for('static', filename='images/Assignment/Home Page/YouTube.png') }}" class="icon">
+        <img src="{{ url_for('static', filename='images/Assignment/Home Page/Email.png') }}" class="icon">
+      </span>
+    </p>
+    <p><b>PAYMENTS</b><br>
+      <img src="{{ url_for('static', filename='images/Assignment/Home Page/Payments.png') }}" alt="Payments">
+    </p>
+    <p><b>ABOUT US</b><br>
+      At Petals and Presents, we make gifting easy! Whether it’s a birthday, anniversary, or any special moment, we have the perfect gift for you. We offer fast, reliable delivery and a variety of flowers, personalized gifts, and more to bring joy to your loved ones. Sit back, relax, and shop with us today!
+    </p>
+  </div>
+</footer>
+
+{% endblock %}

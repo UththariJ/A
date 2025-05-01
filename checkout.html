@@ -1,0 +1,144 @@
+{% extends 'layout.html' %}
+
+{% block title %}Checkout | Petals & Presents{% endblock %}
+
+{% block content %}
+<header class="navbar">
+    <div class="brand-container">
+      <img src="{{ url_for('static', filename='images/Assignment/Home Page/Logo of Petal & Presents.png') }}" alt="Petals & Presents Logo" class="brand-logo">
+      <div class="logo">Petals & Presents</div>
+    </div>
+    <input type="text" placeholder="Search for anything..." class="search">
+    <button class="search-btn"><img src="{{ url_for('static', filename='images/Assignment/Home Page/Search.WEBP') }}" alt="Search"></button>
+    <div class="icons">
+      <span>Hotline<br>011 2564934</span>
+      <a href="/login"><img src="{{ url_for('static', filename='images/Assignment/Home Page/User Account.png') }}" class="user-circle" alt="User Account"></a>
+      <img src="{{ url_for('static', filename='images/Assignment/Home Page/Shopping Cart.jpg') }}" class="icon">
+    </div>
+  </header>
+
+<nav class="top-nav">
+    <button class="category-btn">Categories ▼</button>
+    <a href="#">Our Collection</a>
+    <a href="{{ url_for('new_arrivals')}}">New Arrivals</a>
+  <a href="{{ url_for('flowers')}}">Flowers</a>
+  <a href="{{ url_for('chocolates')}}">Chocolates</a>
+  <a href="{{ url_for('cakes')}}">Cakes</a>
+  <a href="{{ url_for('gift_sets')}}">Gift Sets</a>
+  <a href="{{ url_for('deals')}}">Deals</a>
+  <a href="{{ url_for('order_status')}}">Order Status</a>
+</nav>
+
+<div class="checkout-container">
+    <div class="checkout-steps">
+        <div class="step active">
+            <div class="step-icon">
+                <img src="{{ url_for('static', filename='images/Assignment/Checkout/cart-check.png') }}" alt="Cart">
+            </div>
+            <span>Cart</span>
+        </div>
+        <div class="step-divider"></div>
+        <div class="step">
+            <div class="step-icon">
+                <img src="{{ url_for('static', filename='images/Assignment/Checkout/user-details.png') }}" alt="User Details">
+            </div>
+            <span>Sender/Receiver<br>Details</span>
+        </div>
+        <div class="step-divider"></div>
+        <div class="step">
+            <div class="step-icon">
+                <img src="{{ url_for('static', filename='images/Assignment/Checkout/shipping.png') }}" alt="Shipping">
+            </div>
+            <span>Shipping</span>
+        </div>
+        <div class="step-divider"></div>
+        <div class="step">
+            <div class="step-icon">
+                <img src="{{ url_for('static', filename='images/Assignment/Checkout/payment.png') }}" alt="Payment">
+            </div>
+            <span>Payment</span>
+        </div>
+    </div>
+
+    <div class="checkout-content">
+        <div class="checkout-left">
+            <div class="login-option">
+                <h3>Returning Customer?</h3>
+                <button class="btn-login">LOGIN</button>
+                <div class="or-divider">Guest Checkout</div>
+            </div>
+
+            <div class="recipient-form">
+                <h3>Recipient Information</h3>
+                <form>
+                    <input type="text" placeholder="Recipient Name" class="form-input">
+                    <textarea placeholder="Recipient Address" class="form-textarea"></textarea>
+                    <div class="select-wrapper">
+                        <select class="form-select">
+                            <option value="" disabled selected>Select City</option>
+                            <option value="colombo">Colombo</option>
+                            <option value="kandy">Kandy</option>
+                            <option value="galle">Galle</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="checkout-right">
+            <div class="order-summary">
+                <h3>Order Summary</h3>
+                <div class="order-row">
+                    <span>Sub Total:</span>
+                    <span>Rs. 7,950.00</span>
+                </div>
+                <div class="order-row">
+                    <span>Flat Discount:</span>
+                    <span>Rs.0</span>
+                </div>
+                <div class="order-row">
+                    <span>Promotional Discount:</span>
+                    <span>Rs.0</span>
+                </div>
+                <div class="order-row">
+                    <span>Delivery Fee:</span>
+                    <span>Rs. 0</span>
+                </div>
+                <div class="order-row total">
+                    <span>Total:</span>
+                    <span>Rs. 7,950.00</span>
+                </div>
+
+                <div class="promo-code">
+                    <h4>Enter Voucher or Promotional Code</h4>
+                    <div class="promo-input">
+                        <input type="text" placeholder="Enter Promo Code">
+                        <button class="btn-apply">APPLY</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-section">
+        <p><b>INFO</b><br>Privacy Policy<br>Terms & Conditions</p>
+        <p><b>QUICK LINKS</b><br>Flowers<br>Cakes</p>
+        <p><b>KEEP IN TOUCH</b><br>
+            <span class="socials">
+                <img src="{{ url_for('static', filename='images/Assignment/Home Page/Facebook.png') }}" class="icon">
+                <img src="{{ url_for('static', filename='images/Assignment/Home Page/Instagram.png') }}" class="icon">
+                <img src="{{ url_for('static', filename='images/Assignment/Home Page/YouTube.png') }}" class="icon">
+                <img src="{{ url_for('static', filename='images/Assignment/Home Page/Email.png') }}" class="icon">
+            </span>
+        </p>
+        <p><b>PAYMENTS</b><br>
+            <img src="{{ url_for('static', filename='images/Assignment/Home Page/Payments.png') }}" alt="Payments">
+        </p>
+        <p><b>ABOUT US</b><br>
+            At Petals and Presents, we make gifting easy! Whether it's a birthday, anniversary, or any special moment, we have the perfect gift for you. We offer fast, reliable delivery and a variety of flowers, personalized gifts, and more to bring joy to your loved ones. Sit back, relax, and shop with us today!
+        </p>
+    </div>
+</footer>
+{% endblock %}
